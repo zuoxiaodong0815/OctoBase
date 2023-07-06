@@ -24,7 +24,7 @@ members = [
 resolver = "2"
 
 [workspace.dependencies]
-jwst = { workspace = true, path = "jwst" }
+# jwst = { workspace = true, path = "jwst" }
 jwst-codec = { workspace = true, path = "libs/jwst-codec" }
 jwst-logger = { workspace = true, path = "libs/jwst-logger" }
 jwst-rpc = { workspace = true, path = "libs/jwst-rpc" }
