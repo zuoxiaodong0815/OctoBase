@@ -6,7 +6,7 @@ members = [
     "libs/cloud-database",
     "libs/cloud-database/migration",
     "libs/cloud-infra",
-    "libs/jwst",
+    "jwst",
     # "libs/jwst-binding/jwst-ffi",
     "libs/jwst-binding/jwst-jni",
     # "libs/jwst-binding/jwst-py",
@@ -18,17 +18,17 @@ members = [
     #"libs/jwst-codec/fuzz",
     "libs/jwst-logger",
     "libs/jwst-rpc",
-    "libs/jwst-storage",
+    "jwst-storage",
     "libs/jwst-storage/src/migration",
 ]
 resolver = "2"
 
 [workspace.dependencies]
-jwst = { workspace = true, path = "libs/jwst" }
+jwst = { workspace = true, path = "jwst" }
 jwst-codec = { workspace = true, path = "libs/jwst-codec" }
 jwst-logger = { workspace = true, path = "libs/jwst-logger" }
 jwst-rpc = { workspace = true, path = "libs/jwst-rpc" }
-jwst-storage = { workspace = true, path = "libs/jwst-storage" }
+jwst-storage = { workspace = true, path = "jwst-storage" }
 
 [profile.release]
 lto = true
