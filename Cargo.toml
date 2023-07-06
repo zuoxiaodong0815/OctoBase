@@ -2,5 +2,5 @@
 
 members = [
     "jwst",
-    "jwst-storage",
+    "jwst-storage"
 ]
