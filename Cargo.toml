@@ -1,58 +1,6 @@
 [workspace]
 
 members = [
-    "apps/cloud",
-    "apps/keck",
-    "libs/cloud-database",
-    "libs/cloud-database/migration",
-    "libs/cloud-infra",
     "jwst",
-    # "libs/jwst-binding/jwst-ffi",
-    "libs/jwst-binding/jwst-jni",
-    # "libs/jwst-binding/jwst-py",
-    "libs/jwst-binding/jwst-swift",
-    "libs/jwst-binding/jwst-swift/jwst-swift-integrate",
-    # "libs/jwst-binding/jwst-wasm",
-    "libs/jwst-codec",
-    "libs/jwst-codec-util",
-    #"libs/jwst-codec/fuzz",
-    "libs/jwst-logger",
-    "libs/jwst-rpc",
     "jwst-storage",
-    "libs/jwst-storage/src/migration",
 ]
-resolver = "2"
-
-[workspace.dependencies]
-# jwst = { workspace = true, path = "jwst" }
-jwst-codec = { workspace = true, path = "libs/jwst-codec" }
-jwst-logger = { workspace = true, path = "libs/jwst-logger" }
-jwst-rpc = { workspace = true, path = "libs/jwst-rpc" }
-jwst-storage = { workspace = true, path = "jwst-storage" }
-
-[profile.release]
-lto = true
-opt-level = 3
-codegen-units = 1
-
-[profile.fast-release]
-inherits = "release"
-codegen-units = 16
-lto = false
-
-[profile.profiling]
-inherits = "fast-release"
-debug = true
-
-# [profile.release.package.jwst-codec-fuzz]
-# debug = 1
-
-[profile.dev.package.image]
-opt-level = 3
-
-[profile.dev.package.sqlx-macros]
-opt-level = 3
-
-[patch.crates-io]
-lib0 = { git = "https://github.com/toeverything/y-crdt", rev = "a700f09" }
-yrs = { git = "https://github.com/toeverything/y-crdt", rev = "a700f09" }
